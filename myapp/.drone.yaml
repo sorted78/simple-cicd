@@ -1,19 +1,11 @@
-name: default
-
 kind: pipeline
-type: docker
-
+name: default
 steps:
-- name: backend
-  image: golang
-  commands:
-    - go get
-    - go build ./myapp
-    - go test
-
-- name: publish
-  image: plugins/docker
-  settings:
-    repo: sorted78/vmware-demo
-    tags: [ 1, 1.1, latest ]
-    registry: index.docker.io
+- name: test
+ image: golang:1.10-alpine
+ commands:
+   - "go test"
+- name: build
+ image: golang:1.10-alpine
+ commands:
+   - "go build -o ./myapp"
