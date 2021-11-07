@@ -101,6 +101,7 @@ extraSecretNamesForEnvFrom: []
 rbac:
   buildNamespaces:
     - default
+    - drone
 
 ## The keys within the "env" map are mounted as environment variables on the Kubernetes runner pod.
 ## See the full reference of Kubernetes runner environment variables here:
@@ -128,4 +129,4 @@ env:
   ## Determines the default Kubernetes namespace for Drone builds to run in.
   ## Ref: https://kube-runner.docs.drone.io/installation/reference/drone-namespace-default/
   ##
-  DRONE_NAMESPACE_DEFAULT: default
+  DRONE_NAMESPACE_DEFAULT: drone
