@@ -20,7 +20,7 @@ func TestServeHTTP(t *testing.T) {
    if resp.StatusCode != 200 {
        t.Fatalf("Received non-200 response: %d\n", resp.StatusCode)
    }
-   expected := `{"message": "hello world!!!!!!!!"}`
+   expected := `{"message": "hello worldvvvvvvvv"}`
    actual, err := ioutil.ReadAll(resp.Body)
    if err != nil {
        t.Fatal(err)
