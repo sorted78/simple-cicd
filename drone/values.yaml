@@ -168,6 +168,7 @@ env:
   DRONE_SERVER_PROTO: https
 
   DRONE_LOGS_DEBUG: true
+  DRONE_USER_CREATE: username:sorted78,admin:true
 
   ## REQUIRED: Set the secret secret token that the Drone server and its Runners will use
   ## to authenticate. This is commented out in order to leave you the ability to set the
