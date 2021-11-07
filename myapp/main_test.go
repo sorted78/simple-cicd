@@ -7,6 +7,7 @@ import (
    "testing"
 )
 
+
 func TestServeHTTP(t *testing.T) {
    handler := &Server{}
    server := httptest.NewServer(handler)
@@ -17,7 +18,7 @@ func TestServeHTTP(t *testing.T) {
        t.Fatal(err)
    }
    if resp.StatusCode != 200 {
-       t.Fatalf("Received non-200 response: %d\n", resp.StatusCode)
+       t.Fatalf("Received non-2001 response: %d\n", resp.StatusCode)
    }
    expected := `{"message": "hello world"}`
    actual, err := ioutil.ReadAll(resp.Body)
