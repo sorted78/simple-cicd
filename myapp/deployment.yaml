@@ -30,7 +30,7 @@ spec:
    spec:
      containers:
      - name: app
-       image: "magalixcorp/k8scicd"
+       image: "sorted78/vmware-demo"
        resources:
          requests:
            cpu: 10m
