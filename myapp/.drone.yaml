@@ -1,13 +1,13 @@
+name: default
 kind: pipeline
-name: Pipeline
-  
-steps:
+type: docker
 
+steps:
 - name: testing
   image: golang
   commands:
   - go test
-      
+     
 - name: build
   image: golang
   commands:
