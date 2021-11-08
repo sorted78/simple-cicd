@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vmware-demo
+  name: demo
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: vmware-demo
+      app: demo
   template:
     metadata:
       labels:
-        app: vmware-demo
+        app: demo
     spec:
       containers:
       # modify the following line with your Docker Hub account name
       - image: index.docker.io/sorted78/vmware-demo:latest
-        name: vmware-demo
+        name: demo
         ports:
         - containerPort: 8080
