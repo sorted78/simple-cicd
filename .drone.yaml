@@ -18,4 +18,4 @@ steps:
       from_secret: DOCKER_PASSWORD
     repo: sorted78/vmware-demo
     tags:
-      - 2.0
+      - 3.0
