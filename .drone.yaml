@@ -19,5 +19,3 @@ steps:
     repo: sorted78/vmware-demo
     tags:
       - latest
-      - 1.0
-    auto_tag_suffix: drone-build

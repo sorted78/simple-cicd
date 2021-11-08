@@ -14,7 +14,6 @@ spec:
         app: demo
     spec:
       containers:
-      # modify the following line with your Docker Hub account name
       - image: index.docker.io/sorted78/vmware-demo:latest
         name: demo
         ports:
