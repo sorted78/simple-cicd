@@ -1,36 +1,21 @@
-apiVersion: v1
-kind: Service
-metadata:
- name: hello-svc
-spec:
- selector:
-   role: app
- ports:
-   - protocol: TCP
-     port: 80
-     targetPort: 8080
-     nodePort: 32001
- type: NodePort
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: hello-deployment
- labels:
-   role: app
+  name: vmware-demo
 spec:
- replicas: 2
- selector:
-   matchLabels:
-     role: app
- template:
-   metadata:
-     labels:
-       role: app
-   spec:
-     containers:
-     - name: app
-       image: "sorted78/vmware-demo"
-       resources:
-         requests:
-           cpu: 10m
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: vmware-demo
+  template:
+    metadata:
+      labels:
+        app: vmware-demo
+    spec:
+      containers:
+      # modify the following line with your Docker Hub account name
+      - image: index.docker.io/sorted78/vmware-demo:latest
+        name: vmware-demo
+        ports:
+        - containerPort: 8080
