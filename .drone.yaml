@@ -17,5 +17,7 @@ steps:
     password:
       from_secret: DOCKER_PASSWORD
     repo: sorted78/vmware-demo
-    auto_tag: true
+    tags:
+      - latest
+      - 1.0
     auto_tag_suffix: drone-build
